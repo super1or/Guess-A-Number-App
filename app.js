@@ -13,7 +13,7 @@ let min = 1,
     guessesLeft = 3;
 
 // UI elements
-const UIgame = document.querySelector('game'),
+const UIgame = document.querySelector('#game'),
     UIminNum = document.querySelector('.min-num'),
     UImaxNum = document.querySelector('.max-num'),
     UIguessBtn = document.querySelector('#guess-btn'),
@@ -25,13 +25,13 @@ UIminNum.textContent = min;
 UImaxNum.textContent = max;
 
 // Play again event listener
-game.addEventListener('mousedown', function(e) {
+UIgame.addEventListener('mousedown', function(e) {
     if (e.target.className === 'play-again') {
         window.location.reload();
     }
 });
 
-// Listen for guess
+// EventListen for guess
 UIguessBtn.addEventListener('click', function () {
     let guess = parseInt(UIguessInput.value);
 
